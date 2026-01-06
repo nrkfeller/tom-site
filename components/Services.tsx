@@ -310,7 +310,7 @@ function ServiceModal({ service, isOpen, onClose }: { service: typeof services[0
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400" />
-                    What You'll Get
+                    What You&apos;ll Get
                   </h4>
                   <ul className="space-y-2">
                     {service.deliverables.map((deliverable, idx) => (

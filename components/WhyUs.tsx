@@ -199,7 +199,7 @@ export default function WhyUs() {
             Why Choose <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Top of Mind Labs</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We're not just consultants—we're your technical partners committed to your success
+            We&apos;re not just consultants—we&apos;re your technical partners committed to your success
           </p>
         </motion.div>
 

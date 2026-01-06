@@ -10,7 +10,6 @@ import {
   TestTube,
   Rocket,
   RefreshCw,
-  ArrowRight,
   ArrowDown,
 } from "lucide-react";
 

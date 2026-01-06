@@ -53,7 +53,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: typeof testimoni
 
       {/* Quote */}
       <p className="text-gray-300 leading-relaxed mb-6 relative z-10">
-        "{testimonial.quote}"
+        &quot;{testimonial.quote}&quot;
       </p>
 
       {/* Author Info - Hidden for now */}
@@ -102,7 +102,7 @@ export default function Testimonials() {
             Trusted by <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Industry Leaders</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our clients say about working with us.
+            Don&apos;t just take our word for it. Here&apos;s what our clients say about working with us.
           </p>
         </motion.div>
 

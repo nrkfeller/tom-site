@@ -95,7 +95,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-xl md:text-2xl text-white/95 mb-8 max-w-4xl mx-auto leading-relaxed text-balance drop-shadow-md"
           >
-            We help the world's most ambitious enterprises move from{" "}
+            We help the world&apos;s most ambitious enterprises move from{" "}
             <span className="font-semibold text-yellow-300">AI concepts</span> to{" "}
             <span className="font-semibold text-yellow-300">real operational impact</span>
             —delivering measurable business outcomes within months, not years.
