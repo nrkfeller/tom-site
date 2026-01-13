@@ -5,13 +5,13 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Top of Mind Labs — AI Strategy & Implementation",
-  description: "Transform your enterprise with AI-native systems that drive measurable business outcomes. We help ambitious companies move from AI ideas to operational impact—fast.",
-  keywords: ["AI consulting", "machine learning", "enterprise AI", "AI transformation", "data engineering"],
+  title: "Top of Mind Labs — Deployed AI Researchers & Engineers | AI Strategy & Implementation",
+  description: "Get expert deployed AI researchers and engineers embedded in your team. Transform your enterprise with production-ready AI systems that drive measurable business outcomes—delivered in months, not years.",
+  keywords: ["deployed AI researchers", "deployed AI engineers", "AI consulting", "machine learning engineers", "AI talent", "enterprise AI", "AI transformation", "data engineering", "embedded AI experts"],
   authors: [{ name: "Top of Mind Labs" }],
   openGraph: {
-    title: "Top of Mind Labs — AI Strategy & Implementation",
-    description: "Transform your enterprise with AI-native systems that drive measurable business outcomes.",
+    title: "Top of Mind Labs — Deployed AI Researchers & Engineers",
+    description: "Expert AI researchers and engineers integrated directly into your team, delivering production-ready solutions while building your internal AI capabilities.",
     type: "website",
   },
 };

@@ -73,7 +73,7 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-200 shadow-lg">
               <Sparkles className="w-4 h-4 text-blue-600" />
               <span className="text-sm font-semibold text-blue-600">
-                AI-Native Enterprise Solutions
+                Deployed AI Researchers & Engineers
               </span>
             </div>
           </motion.div>

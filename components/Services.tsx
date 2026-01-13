@@ -14,9 +14,29 @@ import {
   CheckCircle,
   Clock,
   Target,
+  Users,
+  Sparkles,
 } from "lucide-react";
 
 const services = [
+  {
+    icon: Users,
+    title: "Deployed AI Researchers and Engineers",
+    description:
+      "Expert AI researchers and engineers integrated directly into your team, delivering production-ready solutions while building your internal AI capabilities.",
+    gradient: "from-blue-400 to-indigo-500",
+    features: ["Embedded Experts", "Knowledge Transfer", "Rapid Delivery"],
+    detailedDescription: "Get immediate access to world-class AI talent without the lengthy hiring process. Our deployed AI researchers and engineers work alongside your team to deliver production systems while transferring knowledge and best practices.",
+    deliverables: [
+      "Dedicated AI researchers and engineers",
+      "Production-ready AI systems",
+      "Technical documentation and runbooks",
+      "Team training and mentorship",
+      "Ongoing architecture guidance"
+    ],
+    timeline: "Flexible (3-12+ months)",
+    idealFor: "Organizations needing immediate AI expertise to accelerate projects or bridge capability gaps"
+  },
   {
     icon: Lightbulb,
     title: "Product Design Workshops",
@@ -88,6 +108,24 @@ const services = [
     ],
     timeline: "6-10 weeks",
     idealFor: "Engineering teams spending too much time on operational work and incident response"
+  },
+  {
+    icon: Sparkles,
+    title: "Generative AI & LLM Solutions",
+    description:
+      "Custom large language models and generative AI systems that transform customer experiences, automate workflows, and unlock new business capabilities.",
+    gradient: "from-violet-500 to-fuchsia-500",
+    features: ["Custom LLM Fine-tuning", "RAG Systems", "AI Agents"],
+    detailedDescription: "Harness the power of generative AI with custom solutions built on cutting-edge LLMs. From intelligent chatbots to document processing and content generation, we build production-grade systems that integrate seamlessly with your business.",
+    deliverables: [
+      "Fine-tuned language models",
+      "Retrieval-augmented generation (RAG) systems",
+      "Custom AI agents and assistants",
+      "Prompt engineering frameworks",
+      "Safety and compliance guardrails"
+    ],
+    timeline: "4-8 weeks",
+    idealFor: "Companies looking to leverage ChatGPT-like capabilities with proprietary data and custom workflows"
   },
 ];
 
@@ -425,10 +463,10 @@ export default function Services() {
             Our <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Services</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
-            End-to-end AI solutions that transform your business from concept to production
+            Deployed AI researchers and engineers delivering end-to-end solutions—from concept to production
           </p>
           <p className="text-blue-400 font-semibold">
-            → Full-stack implementation, not just consulting
+            → Expert talent embedded in your team, not just consulting
           </p>
         </motion.div>
 
