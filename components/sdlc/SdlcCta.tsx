@@ -19,21 +19,17 @@ export default function SdlcCta() {
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-2xl border border-[hsl(var(--border-strong))] bg-surface px-6 py-14 md:py-20 text-center"
+          className="relative overflow-hidden rounded-2xl border border-[hsl(var(--border-strong))] bg-surface px-6 py-16 md:py-24 text-center"
         >
           {/* Soft warm glow */}
           <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[36rem] h-[36rem] rounded-full bg-accent-soft blur-3xl opacity-60 pointer-events-none" />
 
           <div className="relative z-10 max-w-2xl mx-auto">
-            <p className="text-xs text-muted uppercase tracking-widest mb-4">
-              Book a technical assessment
-            </p>
             <h2 className="text-3xl md:text-5xl font-medium text-foreground tracking-tight mb-5 text-balance">
-              Find out what&apos;s ungoverned in your agent SDLC
+              Find out what&apos;s ungoverned underneath your agents
             </h2>
             <p className="text-muted text-base leading-relaxed mb-9">
-              We map what&apos;s running, what&apos;s exposed, and what to fix first — and hand
-              you a prioritized list. Whether or not you work with us after is up to you.
+              We map it and hand you the list. Whether you work with us after is up to you.
             </p>
 
             <Link

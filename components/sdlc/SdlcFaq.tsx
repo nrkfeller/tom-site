@@ -13,19 +13,19 @@ interface Faq {
 const faqs: Faq[] = [
   {
     q: "Do you require us to standardize on one agent?",
-    a: "No. We're agent-agnostic. Bring Claude Code, Cursor, Cline, Codex, Amp — or several at once. The controls live in your SDLC, not in a vendor choice, so you keep your options open and can switch agents without redoing the governance.",
+    a: "No. We're agnostic — bring several. The controls live in your SDLC, not in a vendor.",
   },
   {
     q: "How do you handle our data and IP?",
-    a: "Agent runs and your code stay in your environment and your accounts. We set policy on what data each agent can read and send, and we don't host your code or your prompts. The config, gates, and audit logs all land in your repos — not ours.",
+    a: "Code and runs stay in your environment. We don't host your code or your prompts.",
   },
   {
     q: "We're already mid-adoption — can you help?",
-    a: "Yes — that's the most common place we start. If three teams already run three different agents with no shared rules, we meet you there. The Assess phase maps what's running and what's exposed before we change anything.",
+    a: "That's where we usually start. We meet you where you are, with whatever's already running.",
   },
   {
     q: "Do you build agents, or integrate them?",
-    a: "Integrate. We don't sell an agent and we don't lock you to one. We make the SDLC around whatever agent you run hold up — branch policy, merge gates, audit logs, and the metrics leadership trusts.",
+    a: "Integrate. We don't sell one. We make the SDLC around it hold up.",
   },
 ];
 
@@ -47,13 +47,9 @@ export default function SdlcFaq() {
           className="mb-10"
         >
           <p className="text-xs text-muted uppercase tracking-widest mb-3">FAQ</p>
-          <h2 className="text-3xl md:text-4xl font-medium text-foreground tracking-tight mb-3">
+          <h2 className="text-3xl md:text-5xl font-medium text-foreground tracking-tight mb-3">
             Questions we hear first
           </h2>
-          <p className="text-muted text-sm leading-relaxed">
-            Mostly from VPs of Engineering and platform leads already running agents — and
-            not sure the pipeline around them holds up.
-          </p>
         </motion.div>
 
         <div className="border border-[hsl(var(--border))] rounded-xl bg-surface overflow-hidden">
@@ -86,7 +82,7 @@ export default function SdlcFaq() {
                       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                       className="overflow-hidden"
                     >
-                      <p className="px-6 pb-5 text-muted text-[13px] leading-relaxed">
+                      <p className="px-6 pb-5 text-muted text-[15px] leading-relaxed">
                         {faq.a}
                       </p>
                     </motion.div>

@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import Link from "next/link";
 
-// Concrete nouns over vague ones. The touchpoints the work actually lives in.
-const touchpoints = ["Git", "CI", "Jira", "Slack", "Security", "Metrics"];
+// Real agents, named — not favored. The strip carries the whole agent-neutrality
+// message in one line, so the page doesn't need a separate section for it.
+const agents = ["Claude Code", "Cursor", "Cline", "Codex", "Amp"];
 
 export default function SdlcHero() {
   return (
@@ -55,19 +56,18 @@ export default function SdlcHero() {
           >
             <span className="text-foreground">The agent is the easy part.</span>
             <br />
-            <span className="text-muted">Wiring it into your SDLC is the hard part.</span>
+            <span className="text-muted">The hard part is everything underneath it.</span>
           </motion.h1>
 
-          {/* Subheading */}
+          {/* Subheading — one line */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.6 }}
             className="text-lg text-muted max-w-2xl leading-relaxed"
           >
-            We integrate your coding agents into Git, CI, Jira, and Slack — with branch
-            policy, merge gates, audit logs, and metrics leadership actually trusts. Bring
-            whatever agent you already run.
+            We build the substrate underneath your coding agents — the governance, gates, and
+            numbers leadership trusts.
           </motion.p>
 
           {/* CTA buttons */}
@@ -85,37 +85,38 @@ export default function SdlcHero() {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-300" />
             </Link>
             <Link
-              href="#deliver"
+              href="#build"
               className="inline-flex items-center justify-center gap-2 text-foreground px-7 py-3.5 rounded-lg font-medium text-sm border border-[hsl(var(--border-strong))] hover:border-[hsl(var(--muted))] hover:bg-surface transition-all duration-300"
             >
-              See what we deliver
+              See what we build
             </Link>
           </motion.div>
 
-          {/* Touchpoint strip — concrete nouns, no invented numbers */}
+          {/* Agent-neutrality strip — one line, not a whole section */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.65, duration: 0.6 }}
-            className="pt-6"
+            className="pt-8"
           >
-            <div className="flex items-center gap-2 mb-4">
-              <p className="text-xs uppercase tracking-[0.24em] text-muted">
-                Where the work happens
-              </p>
-              <span className="h-px flex-1 bg-[hsl(var(--border))]" />
-            </div>
-
-            <div className="flex flex-wrap gap-2.5 max-w-3xl">
-              {touchpoints.map((t) => (
-                <span
-                  key={t}
-                  className="font-mono text-sm uppercase tracking-widest text-muted/80 border border-[hsl(var(--border))] bg-surface rounded-lg px-3.5 py-2"
-                >
-                  {t}
+            <p className="text-xs uppercase tracking-[0.24em] text-muted mb-4">
+              Works with the agent you run
+            </p>
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-3">
+              {agents.map((a, i) => (
+                <span key={a} className="flex items-center gap-3">
+                  <span className="font-mono text-sm uppercase tracking-widest text-muted/80">
+                    {a}
+                  </span>
+                  {i < agents.length - 1 && (
+                    <span className="text-muted/40">·</span>
+                  )}
                 </span>
               ))}
             </div>
+            <p className="text-sm text-muted max-w-xl">
+              Local or remote. We don&apos;t sell one — and we don&apos;t favor one.
+            </p>
           </motion.div>
 
           {/* Scroll cue */}
