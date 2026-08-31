@@ -25,6 +25,7 @@ export default function Header() {
   const navItems = [
     { label: "Services", href: hash("services") },
     { label: "Process", href: hash("process") },
+    { label: "AI in SDLC", href: "/sdlc" },
     { label: "Case Studies", href: "/case-studies" },
   ];
 
