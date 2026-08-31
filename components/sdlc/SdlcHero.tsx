@@ -6,7 +6,7 @@ import Link from "next/link";
 
 // Real agents, named — not favored. The strip carries the whole agent-neutrality
 // message in one line, so the page doesn't need a separate section for it.
-const agents = ["Claude Code", "Cursor", "Cline", "Codex", "Amp"];
+const agents = ["Claude Code", "Cursor", "Pi", "Codex", "Amp"];
 
 export default function SdlcHero() {
   return (
