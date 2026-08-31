@@ -9,6 +9,12 @@ const geist = localFont({
   display: "swap",
 });
 
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Top of Mind Labs — AI Researchers & Engineers Embedded in Your Team",
   description: "We deploy senior AI researchers and engineers directly into your team. Production AI systems in months, not years — with full knowledge transfer so your team owns it.",
@@ -27,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`scroll-smooth ${geist.variable}`}>
+    <html lang="en" className={`scroll-smooth ${geist.variable} ${geistMono.variable}`}>
       <body className="font-sans antialiased">
         {children}
         <Script

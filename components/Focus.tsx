@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Building2, TrendingUp, Target, Users } from "lucide-react";
+import { Building2, TrendingUp, Target, Handshake } from "lucide-react";
 
 export default function Focus() {
   const ref = useRef(null);
@@ -26,7 +26,7 @@ export default function Focus() {
       description: "Leaders who measure success by business impact, not slides delivered",
     },
     {
-      icon: Users,
+      icon: Handshake,
       title: "Technical Leadership",
       description: "CTOs and VPs of Engineering who want a partner, not a vendor",
     },
@@ -44,12 +44,12 @@ export default function Focus() {
           transition={{ duration: 0.6 }}
           className="mb-14 max-w-3xl"
         >
-          <p className="text-xs text-[hsl(var(--muted))] uppercase tracking-widest mb-3">Who We Serve</p>
+          <p className="text-xs text-muted uppercase tracking-widest mb-3">Who We Serve</p>
           <h2 className="text-3xl md:text-4xl font-medium text-foreground tracking-tight mb-5">
             Built for Growth-Stage and PE-Backed Companies
           </h2>
-          <p className="text-[hsl(var(--muted))] text-base leading-relaxed">
-            We work best with <span className="text-foreground">private equity portfolio companies</span> and growth-stage businesses that need AI to work — not just an AI strategy deck. If you're under pressure to create value fast, we're built for that.
+          <p className="text-muted text-base leading-relaxed">
+            We work best with <span className="text-foreground">private equity portfolio companies</span> and growth-stage businesses that need AI to work — not just an AI strategy deck. If you&apos;re under pressure to ship something that holds up, we&apos;re built for that.
           </p>
         </motion.div>
 
@@ -62,14 +62,14 @@ export default function Focus() {
               transition={{ duration: 0.5, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
               className="group"
             >
-              <div className="bg-surface rounded-xl p-6 border border-[hsl(var(--border))] hover:border-[hsl(var(--muted)/0.5)] transition-all duration-400 h-full">
-                <div className="w-10 h-10 rounded-lg bg-surface border border-[hsl(var(--border))] flex items-center justify-center mb-5">
-                  <feature.icon className="w-5 h-5 text-[hsl(var(--muted))]" />
+              <div className="bg-surface rounded-xl p-6 border border-[hsl(var(--border))] hover:border-[hsl(var(--border-strong))] hover:shadow-sm transition-all duration-400 h-full">
+                <div className="w-10 h-10 rounded-lg bg-accent-soft border border-[hsl(var(--accent-soft))] flex items-center justify-center mb-5">
+                  <feature.icon className="w-5 h-5 text-accent" />
                 </div>
                 <h3 className="text-base font-medium text-foreground mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-[hsl(var(--muted))] text-sm leading-relaxed">
+                <p className="text-muted text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </div>

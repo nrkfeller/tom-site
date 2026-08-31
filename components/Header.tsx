@@ -25,7 +25,7 @@ export default function Header() {
   const navItems = [
     { label: "Services", href: hash("services") },
     { label: "Process", href: hash("process") },
-    { label: "Why Us", href: hash("why-us") },
+    { label: "Agent Engineering", href: "/sdlc" },
     { label: "Case Studies", href: "/case-studies" },
   ];
 
@@ -36,15 +36,15 @@ export default function Header() {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-[hsl(0_0%_7%/0.9)] backdrop-blur-xl border-b border-[hsl(var(--border))]"
-          : "bg-transparent border-b border-[hsl(var(--border)/0.5)]"
+          ? "bg-[hsl(var(--background)/0.85)] backdrop-blur-xl border-b border-[hsl(var(--border))]"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-8 h-8 rounded-lg border border-[hsl(var(--border))] bg-surface flex items-center justify-center">
-              <Sparkles className="w-4 h-4 text-[hsl(var(--muted))]" />
+            <div className="w-8 h-8 rounded-lg border border-[hsl(var(--border))] bg-accent-soft flex items-center justify-center">
+              <Sparkles className="w-4 h-4 text-accent" />
             </div>
             <span className="text-sm font-medium text-foreground tracking-widest uppercase">
               Top of Mind Labs
@@ -56,14 +56,14 @@ export default function Header() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-[hsl(var(--muted))] hover:text-foreground transition-colors duration-300 text-sm"
+                className="text-muted hover:text-foreground transition-colors duration-300 text-sm"
               >
                 {item.label}
               </Link>
             ))}
             <Link
               href={hash("contact")}
-              className="border border-foreground text-foreground px-5 py-2 rounded-lg text-sm font-medium hover:bg-foreground hover:text-[hsl(var(--background))] transition-all duration-300"
+              className="bg-accent text-accent-foreground px-5 py-2 rounded-lg text-sm font-medium hover:bg-accent-hover transition-all duration-300"
             >
               Talk to Us
             </Link>
@@ -71,7 +71,7 @@ export default function Header() {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-[hsl(var(--muted))] hover:text-foreground transition-colors"
+            className="md:hidden p-2 text-muted hover:text-foreground transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -86,7 +86,7 @@ export default function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="md:hidden bg-[hsl(0_0%_7%/0.97)] backdrop-blur-xl border-t border-[hsl(var(--border))]"
+            className="md:hidden bg-[hsl(var(--background)/0.97)] backdrop-blur-xl border-t border-[hsl(var(--border))]"
           >
             <nav className="px-6 py-6 space-y-1">
               {navItems.map((item) => (
@@ -94,7 +94,7 @@ export default function Header() {
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block px-4 py-3 text-[hsl(var(--muted))] hover:text-foreground transition-colors text-sm"
+                  className="block px-4 py-3 text-muted hover:text-foreground transition-colors text-sm"
                 >
                   {item.label}
                 </Link>
@@ -103,7 +103,7 @@ export default function Header() {
                 <Link
                   href={hash("contact")}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-center border border-foreground text-foreground px-6 py-3 rounded-lg text-sm font-medium"
+                  className="block text-center bg-accent text-accent-foreground px-6 py-3 rounded-lg text-sm font-medium"
                 >
                   Talk to Us
                 </Link>

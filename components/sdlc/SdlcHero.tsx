@@ -4,29 +4,11 @@ import { motion } from "framer-motion";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import Link from "next/link";
 
-// Outcome deltas drawn from real engagements (see /case-studies Results Dossier).
-const stats = [
-  {
-    domain: "Tax Advisory",
-    before: "4 hrs",
-    after: "10 min",
-    label: "Multi-year scenario modeling",
-  },
-  {
-    domain: "Government",
-    before: "3 mo",
-    after: "2 wks",
-    label: "Financial report production",
-  },
-  {
-    domain: "Benefits & HR",
-    before: "1.5 hrs",
-    after: "30 sec",
-    label: "RFP census processing",
-  },
-];
+// Real agents, named — not favored. The strip carries the whole agent-neutrality
+// message in one line, so the page doesn't need a separate section for it.
+const agents = ["Claude Code", "Cursor", "Pi", "Codex", "Amp"];
 
-export default function Hero() {
+export default function SdlcHero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Warm grid background */}
@@ -50,7 +32,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="space-y-9"
         >
-          {/* Status badge */}
+          {/* Positioning badge */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,33 +43,34 @@ export default function Hero() {
                 <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-60 animate-ping" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
               </span>
-              Currently accepting new partners
+              Agent-agnostic · no vendor lock-in
             </span>
           </motion.div>
 
-          {/* Heading */}
+          {/* Heading — outcome, not the tool */}
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.25rem] font-medium leading-[1.05] tracking-tight text-balance max-w-4xl"
           >
-            <span className="text-foreground">Your AI team,</span>
+            <span className="text-foreground">The agent is the easy part.</span>
             <br />
-            <span className="text-muted">deployed and delivering.</span>
+            <span className="text-muted">The hard part is everything underneath it.</span>
           </motion.h1>
 
-          {/* Subheading */}
+          {/* Subheading — one line */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.6 }}
             className="text-lg text-muted max-w-2xl leading-relaxed"
           >
-            We embed AI researchers and engineers directly in your team — building production systems and training your people to run them.
+            We build the substrate underneath your coding agents — the governance, gates, and
+            numbers leadership trusts.
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* CTA buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -98,51 +81,42 @@ export default function Hero() {
               href="#contact"
               className="group inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-7 py-3.5 rounded-lg font-medium text-sm hover:bg-accent-hover transition-all duration-300"
             >
-              Talk to our team
+              Book a technical assessment
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-300" />
             </Link>
             <Link
-              href="#process"
+              href="#build"
               className="inline-flex items-center justify-center gap-2 text-foreground px-7 py-3.5 rounded-lg font-medium text-sm border border-[hsl(var(--border-strong))] hover:border-[hsl(var(--muted))] hover:bg-surface transition-all duration-300"
             >
-              See how we work
+              See what we build
             </Link>
           </motion.div>
 
-          {/* Dashboard stat tiles — proof before you scroll */}
+          {/* Agent-neutrality strip — one line, not a whole section */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.65, duration: 0.6 }}
-            className="pt-6"
+            className="pt-8"
           >
-            <div className="flex items-center gap-2 mb-4">
-              <p className="text-xs uppercase tracking-[0.24em] text-muted">
-                Proof, not promises
-              </p>
-              <span className="h-px flex-1 bg-[hsl(var(--border))]" />
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-4xl">
-              {stats.map((s, index) => (
-                <div
-                  key={index}
-                  className="group rounded-xl border border-[hsl(var(--border))] bg-surface px-5 py-4 hover:border-[hsl(var(--border-strong))] transition-colors duration-300"
-                >
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-muted mb-3">
-                    {s.domain}
-                  </p>
-                  <p className="font-mono nums text-foreground text-xl leading-none tracking-tight mb-3">
-                    <span className="text-muted line-through decoration-1">{s.before}</span>
-                    <ArrowRight className="inline w-4 h-4 mx-2 text-accent align-middle" />
-                    <span className="text-foreground">{s.after}</span>
-                  </p>
-                  <p className="text-[13px] leading-snug text-muted">
-                    {s.label}
-                  </p>
-                </div>
+            <p className="text-xs uppercase tracking-[0.24em] text-muted mb-4">
+              Works with the agent you run
+            </p>
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-3">
+              {agents.map((a, i) => (
+                <span key={a} className="flex items-center gap-3">
+                  <span className="font-mono text-sm uppercase tracking-widest text-muted/80">
+                    {a}
+                  </span>
+                  {i < agents.length - 1 && (
+                    <span className="text-muted/40">·</span>
+                  )}
+                </span>
               ))}
             </div>
+            <p className="text-sm text-muted max-w-xl">
+              Local or remote. We don&apos;t sell one — and we don&apos;t favor one.
+            </p>
           </motion.div>
 
           {/* Scroll cue */}

@@ -10,19 +10,26 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-geist)", "system-ui", "sans-serif"],
+        mono: ["var(--font-geist-mono)", "ui-monospace", "monospace"],
       },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-        },
         surface: {
           DEFAULT: "hsl(var(--surface))",
           raised: "hsl(var(--surface-raised))",
         },
-        border: "hsl(var(--border))",
+        border: {
+          DEFAULT: "hsl(var(--border))",
+          strong: "hsl(var(--border-strong))",
+        },
         muted: "hsl(var(--muted))",
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          hover: "hsl(var(--accent-hover))",
+          soft: "hsl(var(--accent-soft))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-out",
