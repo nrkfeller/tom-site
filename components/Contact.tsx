@@ -60,20 +60,20 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-xs text-[hsl(var(--muted))] uppercase tracking-widest mb-3">Contact</p>
+            <p className="text-xs text-muted uppercase tracking-widest mb-3">Contact</p>
             <h2 className="text-3xl md:text-4xl font-medium text-foreground tracking-tight mb-4">
               Let&apos;s Talk
             </h2>
-            <p className="text-[hsl(var(--muted))] text-base leading-relaxed mb-8">
+            <p className="text-muted text-base leading-relaxed mb-8">
               Tell us what you&apos;re working on. We&apos;ll let you know if we can help — and if we can&apos;t, we&apos;ll point you in the right direction.
             </p>
-            <div className="space-y-3 text-sm text-[hsl(var(--muted))]">
+            <div className="space-y-3 text-sm text-muted">
               <p>
                 <span className="text-foreground">Response time:</span> Within 24 hours
               </p>
               <p>
                 <span className="text-foreground">Email:</span>{" "}
-                <a href="mailto:Nick@gettom.io" className="hover:text-foreground transition-colors underline underline-offset-4 decoration-[hsl(var(--border))]">Nick@gettom.io</a>
+                <a href="mailto:Nick@gettom.io" className="hover:text-accent transition-colors underline underline-offset-4 decoration-[hsl(var(--border-strong))]">Nick@gettom.io</a>
               </p>
             </div>
           </motion.div>
@@ -83,21 +83,21 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <div className="bg-surface rounded-xl p-8 border border-[hsl(var(--border))]">
+            <div className="bg-surface rounded-xl p-8 border border-[hsl(var(--border))] shadow-sm">
               {status === "success" ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-12"
                 >
-                  <CheckCircle2 className="w-12 h-12 text-foreground mx-auto mb-5" />
+                  <CheckCircle2 className="w-12 h-12 text-accent mx-auto mb-5" />
                   <h3 className="text-xl font-medium text-foreground mb-3">Message Sent</h3>
-                  <p className="text-[hsl(var(--muted))] text-sm mb-8">
+                  <p className="text-muted text-sm mb-8">
                     Thanks for reaching out. We&apos;ll get back to you within 24 hours.
                   </p>
                   <button
                     onClick={() => setStatus("idle")}
-                    className="bg-foreground text-[hsl(var(--background))] px-7 py-3 rounded-lg font-medium text-sm hover:bg-white transition-all duration-300"
+                    className="bg-accent text-accent-foreground px-7 py-3 rounded-lg font-medium text-sm hover:bg-accent-hover transition-all duration-300"
                   >
                     Send Another Message
                   </button>
@@ -115,7 +115,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-[hsl(var(--border))] bg-[hsl(var(--background))] text-foreground focus:border-[hsl(var(--muted))] focus:ring-0 transition-all duration-200 outline-none placeholder:text-[hsl(var(--muted)/0.6)] text-sm"
+                      className="w-full px-4 py-3 rounded-lg border border-[hsl(var(--border))] bg-background text-foreground focus:border-accent focus:ring-0 transition-all duration-200 outline-none placeholder:text-[hsl(var(--muted)/0.6)] text-sm"
                       placeholder="Your full name"
                     />
                   </div>
@@ -131,7 +131,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-[hsl(var(--border))] bg-[hsl(var(--background))] text-foreground focus:border-[hsl(var(--muted))] focus:ring-0 transition-all duration-200 outline-none placeholder:text-[hsl(var(--muted)/0.6)] text-sm"
+                      className="w-full px-4 py-3 rounded-lg border border-[hsl(var(--border))] bg-background text-foreground focus:border-accent focus:ring-0 transition-all duration-200 outline-none placeholder:text-[hsl(var(--muted)/0.6)] text-sm"
                       placeholder="your.email@company.com"
                     />
                   </div>
@@ -147,7 +147,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 rounded-lg border border-[hsl(var(--border))] bg-[hsl(var(--background))] text-foreground focus:border-[hsl(var(--muted))] focus:ring-0 transition-all duration-200 outline-none resize-none placeholder:text-[hsl(var(--muted)/0.6)] text-sm"
+                      className="w-full px-4 py-3 rounded-lg border border-[hsl(var(--border))] bg-background text-foreground focus:border-accent focus:ring-0 transition-all duration-200 outline-none resize-none placeholder:text-[hsl(var(--muted)/0.6)] text-sm"
                       placeholder="What are you trying to accomplish with AI? What's blocking you?"
                     />
                   </div>
@@ -155,11 +155,11 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="w-full bg-foreground text-[hsl(var(--background))] px-8 py-3.5 rounded-lg font-medium text-sm hover:bg-white transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-accent text-accent-foreground px-8 py-3.5 rounded-lg font-medium text-sm hover:bg-accent-hover transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {status === "loading" ? (
                       <>
-                        <div className="w-4 h-4 border-2 border-[hsl(var(--background))] border-t-transparent rounded-full animate-spin" />
+                        <div className="w-4 h-4 border-2 border-accent-foreground border-t-transparent rounded-full animate-spin" />
                         Sending...
                       </>
                     ) : (
@@ -171,7 +171,7 @@ export default function Contact() {
                   </button>
 
                   {status === "error" && (
-                    <p className="text-center text-red-400 text-sm">
+                    <p className="text-center text-[hsl(0_70%_48%)] text-sm">
                       Something went wrong. Please try again or email us directly.
                     </p>
                   )}
