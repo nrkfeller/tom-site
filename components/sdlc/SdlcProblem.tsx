@@ -3,13 +3,15 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-// Four things that break when teams adopt agents without the substrate.
+// Five things that break when teams adopt agents without the substrate.
 // Each maps to a real signal from the field: fragmented adoption, the review
-// bottleneck, unattributed spend, and codebase rot within months.
+// bottleneck, unattributed spend, alerts that need cross-system context, and
+// codebase rot within months.
 const problems = [
   "Every engineer runs a different agent. No shared config, no shared rules.",
   "PRs pile up. Reviewers rubber-stamp what they can't verify — or block everything.",
   "The bill climbs. Nobody can tell if it's making you faster.",
+  "An alert fires and the agent can't see across your systems — so a human investigates by hand.",
   "Three months in, the codebase is harder to change than before the agents.",
 ];
 
@@ -34,7 +36,7 @@ export default function SdlcProblem() {
             You have agents. You don&apos;t have the substrate.
           </h2>
           <p className="text-muted text-base leading-relaxed">
-            Most teams we meet are mid-adoption. Four things break.
+            Most teams we meet are mid-adoption. Five things break.
           </p>
         </motion.div>
 
